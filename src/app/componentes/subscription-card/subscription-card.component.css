@@ -1,0 +1,155 @@
+.card-price {
+    width: 300px;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 210px 280px 80px;
+    grid-template-areas: "image" "text" "btn";
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.256);
+    font-family: roboto;
+    text-align: center;
+    transition: .9s;
+}
+
+.card-price b {
+    transition: .9s;
+}
+
+.card-price button {
+    transition: .9s;
+}
+
+
+.card-gold .card-price:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px goldenrod;
+
+}
+
+.card-gold .card-price:hover b {
+    transform: scale(1.1);
+    color: goldenrod;
+
+}
+
+.card-bronze .card-price:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px #C7A18C;
+
+}
+
+.card-bronze .card-price:hover b {
+    transform: scale(1.1);
+    color: #C7A18C;
+
+}
+
+.card-bronze .card-price:hover button {
+    transform: scale(1);
+    background-color: #C7A18C;
+    color: white;
+}
+
+.card-silver .card-price:hover b {
+    transform: scale(1.1);
+    color: grey;
+}
+
+.card-silver .card-price:hover button {
+    transform: scale(1);
+    color: white;
+    background-color: gray;
+}
+
+.card-gold .card-price:hover button {
+    transform: scale(1);
+    background-color: goldenrod;
+    color: white;
+}
+
+.card-premium .card-price:hover button {
+    transform: scale(1);
+    background-color: #6C5846;
+    color: white;
+}
+
+.card-premium .card-price:hover b {
+    transform: scale(1.1);
+    color: rgb(125, 48, 48);
+
+
+}
+
+.card-premium .card-price:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px #6C5846;
+
+}
+
+.card-silver .card-price:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgb(107, 104, 104);
+
+}
+
+
+
+
+
+
+.card-price-image {
+    grid-area: image;
+    /* background: url(src/assets/img/card_gold.png) no-repeat; */
+    /* background-size: contain; */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-price-text {
+    grid-area: text;
+    margin: 0 20px;
+}
+
+.card-price-btn {
+    grid-area: btn;
+}
+
+.card-price-text p {
+    color: gray;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.card-price-text h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.card-price-text .price-tag {
+    font-size: 28px;
+    border-radius: 20px;
+    color: white;
+    background-color: goldenrod;
+    padding: 5px 15px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.card-price-text .price-tag::after {
+    content: "DH";
+    font-size: 10px;
+    position: absolute;
+    top: 10px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.card-price-btn button {
+    border: none;
+    font-size: 28px;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}

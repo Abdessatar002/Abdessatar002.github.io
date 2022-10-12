@@ -1,0 +1,308 @@
+header {
+  --text: #ffe600;
+  --text-inverse: #333;
+  --background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  transition: background 250ms ease-in;
+  background: var(--background);
+  color: var(--text);
+
+}
+
+
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav__link {
+  --spacing: 1em;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: calc(var(--spacing) / 2) var(--spacing);
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+
+.nav__link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing);
+  right: var(--spacing);
+  height: 2px;
+  background: currentColor;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+.nav__link:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+
+
+}
+
+.nav__link--btn {
+  border: 1.5px solid currentColor;
+  border-radius: 2em;
+  margin-left: 1em;
+  transition: background 250ms ease-in-out;
+  letter-spacing: 1px;
+  padding: 0.75em 1.5em;
+}
+
+.nav__link--btn:hover {
+  background: var(--text);
+  color: var(--text-inverse);
+  border-color: var(--text);
+}
+
+.nav__link--btn::after {
+  display: none;
+}
+
+.nav__link--btn--highlight {
+  background: limegreen;
+  border-color: limegreen;
+  color: #333;
+}
+
+.nav__link--btn--highlight:hover {
+  background: var(--text);
+  border-color: var(--text);
+}
+
+.nav-scrolled {
+  --text: #000000;
+  --text-inverse: #f4f4f4;
+  --background: #ffe600;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.home-intro {
+  height: 100vh;
+  background: #46464658 url(src/assets/img/mas-public.jpeg) no-repeat fixed center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: white;
+  text-align: center;
+
+}
+
+.home-intro>.welcome {
+  padding: 30vh 0;
+}
+
+.home-intro p {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  display: inline-block;
+  border: 4px double rgba(255, 255, 255, 0.25);
+  border-width: 4px 0;
+  padding: 1.5em 0em;
+  width: 85%;
+}
+
+.home-intro h1 {
+  font: 1000 1.2em "Oswald", sans-serif;
+  letter-spacing: 0;
+  padding: 0.25em 0 0.325em;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 60px #ffe600;
+  white-space: nowrap;
+  background: url(src/assets/img/animated-text-fill.png) repeat-y;
+  /* background-image: linear-gradient(45deg, blue, red); */
+  background-clip: text;
+  color: transparent;
+  animation: aitf 400s linear infinite;
+}
+
+@keyframes aitf {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nav__link {
+    --spacing: 1em;
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    padding: calc(var(--spacing) / 2) var(--spacing);
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.4rem;
+  }
+
+  .home-intro {
+    height: 100vh;
+    background: #46464658 url(src/assets/img/tifo_rijal.jpg) no-repeat fixed top center;
+    background-size: cover;
+  }
+
+  /* .home-intro .home-brand{} */
+
+
+  header {
+    --text: #ffe600;
+    --text-inverse: #333;
+    --background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1.5em;
+    transition: background 250ms ease-in;
+    background: var(--background);
+    color: var(--text);
+
+  }
+}
+
+.zone {
+  background-color: #ffe600;
+  text-align: center;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.text-shadow {
+  text-shadow: 0px 0px 3px #000000, 0 0 3px #ffe600;
+}
+
+.carousel-item img {
+  height: auto;
+  width: 80%;
+  margin: auto;
+}
+
+/* -------------- */
+.cup {
+  background-color: #ffffff;
+  background-image: url(http://masofficiel.ma/wp-content/uploads/2022/09/BACK.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.public {
+  border-radius: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.public .carousel {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.public img {
+  border-top-left-radius: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.card-match {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 350px;
+  justify-content: center;
+  background-color: #ffe600;
+  padding: 10px;
+  border-radius: 20px;
+
+}
+
+footer .h2 {
+  color: #ffe600;
+}
+
+footer p {
+  text-align: end;
+  color: white;
+}
+
+footer .media {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+
+  transform: translate(0);
+}
+
+footer .media li {
+  list-style: none;
+}
+
+footer .media li a {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #333;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #666;
+  transition: .5s;
+}
+
+footer .media li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffee10;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+footer .media li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+footer .media li a:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}

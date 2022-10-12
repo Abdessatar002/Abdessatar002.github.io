@@ -1,9 +1,13 @@
-const header = document.querySelector("header");
+
+$(document).ready(function () {
+  console.log("ready!");
+  const header = document.querySelector("header");
 const sectionOne = document.querySelector(".home-intro");
 
 const sectionOneOptions = {
   rootMargin: "-200px 0px 0px 0px"
 };
+  const options = {};
 
 const sectionOneObserver = new IntersectionObserver(function(
   entries,
@@ -15,8 +19,11 @@ const sectionOneObserver = new IntersectionObserver(function(
     } else {
       header.classList.remove("nav-scrolled");
     }
-  });
+  }, options);
 },
 sectionOneOptions);
 
-sectionOneObserver.observe(sectionOne);
+  sectionOneObserver.observe(sectionOne);
+});
+
+
