@@ -7,7 +7,7 @@
     border-radius: 18px;
     background: white;
     box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.256);
-    font-family: roboto;
+    /* font-family: roboto; */
     text-align: center;
     transition: .9s;
 }
