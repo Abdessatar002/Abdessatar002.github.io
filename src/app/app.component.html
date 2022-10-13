@@ -53,19 +53,19 @@
   </section>
 </main>
 <div class="container mb-5">
-  <section class="zone mb-5" id="mot">
+  <section class="zone mb-5 ps-5 pe-5 pb-2" id="mot">
     <div style="padding: 3vh 0;">
       <p class="h1-header">MOT DU PRÉSIDENT</p>
     </div>
     <div class="row text-center">
-      <div class="col-sm-12 col-md-7">
-        <img style="height:70vh;width: 80%;" class="mb-2"
+      <div class="col-sm-12 col-md-7 m-0 p-0">
+        <img style="height:100vh;width: 90%;"
           src="assets/img/Image-2022-09-24-at-11.29.25-AM.jpeg" alt="">
       </div>
-      <div class="col-sm-12 col-md-5">
-        <div class="row m-2">
+      <div class="col-sm-12 col-md-5 m-0 p-0">
+        <div class="row">
           <div class="col-12">
-            <p class="" style="height: 100%; font-size: 18px; font-weight: 500;">Chers fans du Maghreb Association Sportive
+            <p class="text-start" style="height: 100%; font-size: 18px; font-weight: 500;">Chers fans du Maghreb Association Sportive
               de Fès,
               C’est avec un immense plaisir que nous vous annonçons le lancement
               du site web officiel de notre cher club.
@@ -101,7 +101,7 @@
     </div>
 
     <div class="container pb-5">
-      <ngx-slick-carousel class="carousel p-2 m-0"
+      <ngx-slick-carousel class="carousel p-2 m-0 "
       #slickModal="slick-carousel"
       [config]="slideConfigOfPalmares">
       <div ngxSlickItem *ngFor="let slide of slidesOfPalmares" class="slide">
@@ -112,9 +112,8 @@
 
           </div>
           <div class="col-sm-12 col-md-5" style="height: 100%; font-size: 18px; font-weight: 500;">
-            <p>
+            <p class="text-start">
               {{slide.story}}
-
             </p>
           </div>
         </div>
@@ -145,9 +144,9 @@
 
 <div class="container">
   <section class="mb-5" id="public">
-        <div class="row zone public">
+        <div class="row zone public pb-5">
               <div class="col-md-8 col-sm-12 m-0 p-0">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                   <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -196,7 +195,14 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                   </button>
-                </div>
+                </div> -->
+                <ngx-slick-carousel class="carousel p-2 m-0 "
+                  #slickModal="slick-carousel"
+                  [config]="slideConfigOfPalmares">
+                  <div ngxSlickItem *ngFor="let slide of slidesOfPublic" class="slide">
+                        <img src="{{ slide.img }}">
+                      </div>
+                </ngx-slick-carousel>
 
               </div>
               <div class="col" style="display: flex; align-self: center;">
@@ -283,7 +289,7 @@
       <div class="col-md col-sm-12"  style="display: flex; align-self: center; ">
         <div style="margin: auto;">
            <p style="font-weight: bolder; " class="h1-header">
-             PROCHAIN MATCHE
+             PROCHAIN MATCH
             </p>
             <p class="text-muted">
              BOTOLA PRO INWI - 4EME JOURNEE
