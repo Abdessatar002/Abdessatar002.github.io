@@ -27,7 +27,7 @@
     </ul>
   </nav>
 </header>
-<main>
+<main class="mb-5">
   <section style="overflow: hidden;" class="home-intro">
     <div class="welcome">
       <div class="home-brand">
@@ -52,7 +52,7 @@
     </div>
   </section>
 </main>
-<div class="container pt-3">
+<div class="container mb-5">
   <section class="zone mb-5" id="mot">
     <div style="padding: 3vh 0;">
       <p class="h1-header">MOT DU PRÉSIDENT</p>
@@ -65,7 +65,7 @@
       <div class="col-sm-12 col-md-5">
         <div class="row m-2">
           <div class="col-12">
-            <p class="font-monospace">Chers fans du Maghreb Association Sportive
+            <p class="" style="height: 100%; font-size: 18px; font-weight: 500;">Chers fans du Maghreb Association Sportive
               de Fès,
               C’est avec un immense plaisir que nous vous annonçons le lancement
               du site web officiel de notre cher club.
@@ -94,141 +94,55 @@
       </div>
     </div>
   </section>
-
-  <section class="zone" id="palmares">
+<br>
+  <section class="zone mb-5" id="palmares">
     <div class="box" style="padding: 3vh 0;">
       <p class="h1-header m-0">PALMARÈS D'UN GRAND CLUB</p>
     </div>
-    <div id="carouselExample" class="carousel slide"
-      data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExample"
-          data-bs-slide-to="0" class="active" aria-current="true"
-          aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExample"
-          data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExample"
-          data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExample"
-          data-bs-slide-to="3" aria-label="Slide 4"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-          <div class="row pb-5">
-            <div class="col-sm-12 col-md-6">
-              <img src="assets/img/hh2-e1662895406926.png" alt="">
-            </div>
-            <div class="col-sm-12 col-md-6">
-              <div class="">
-                <!-- <h5>First slide label</h5> -->
-                <p class="font-monospace">
-                  Sur la scène africaine, le club a hissé haut le drapeau de
-                  notre pays en 2011 en remportant le triplé ;
-                  Coupe du Trône, Coupe de la CAF et Supercoupe africaine
-                  viendront étoffer en 100 jours le palmarès déjà glorieux du
-                  MAS,
-                  et recevra deux lettres de félicitations de la part de Sa
-                  Majesté le Roi Mohammed 6 que Dieu l’assiste.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="10000">
-          <div class="row pb-5">
-            <div class="col-sm-12 col-md-6">
-              <img src="assets/img/HH5-1-e1662897177433.jpeg" alt="">
-            </div>
-            <div class="col-sm-12 col-md-6">
-              <div class="">
-                <!-- <h5>First slide label</h5> -->
-                <p class="font-monospace">
-                  Au niveau national, le MAS a toujours honoré Fès, en
-                  remportant le titre de champion du Maroc à quatre reprises,
-                  une première en 1965, puis en 1979, 1983 et une dernière
-                  fois en 1985,
-                  il terminera dauphin à sept reprises. Le MAS a également une
-                  heureuse histoire avec la Coupe du Trône en la remportant
-                  quatre fois,
-                  1980, 1988, 2011 et la dernière en 2016 dans nos chères
-                  provinces du Sud, à Laâyoune.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
 
+    <div class="container pb-5">
+      <ngx-slick-carousel class="carousel p-2 m-0"
+      #slickModal="slick-carousel"
+      [config]="slideConfigOfPalmares">
+      <div ngxSlickItem *ngFor="let slide of slidesOfPalmares" class="slide">
 
-        <div class="carousel-item" data-bs-interval="10000">
-          <div class="row pb-5">
-            <div class="col-sm-12 col-md-6">
-              <img src="assets/img/HH4-2-e1662896878435.png" alt="">
-            </div>
-            <div class="col-sm-12 col-md-6">
-              <div class="">
-                <!-- <h5>First slide label</h5> -->
-                <p class="font-monospace">
-                   avec ses millions de fans fidèles,
-                  et toutes ses composantes dirigeants adhérents et ville
-                  seront
-                  toujours
-                  mobilisés derrière cet emblème pour ... plus de titres et
-                  célébrations.
-                </p>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-7">
+            <img  src="{{ slide.img }}" width="100%" height="450vh">
+
+          </div>
+          <div class="col-sm-12 col-md-5" style="height: 100%; font-size: 18px; font-weight: 500;">
+            <p>
+              {{slide.story}}
+
+            </p>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="10000">
-          <div class="row pb-5">
-            <div class="col-sm-12 col-md-6">
-              <img src="assets/img/HH1.jpeg" alt="">
-            </div>
-            <div class="col-sm-12 col-md-6">
-              <div class="">
-                <!-- <h5>First slide label</h5> -->
-                <p class="font-monospace">
-                  Plusieurs légendes ont enfilé le maillot du MAS. Les nôtres
-                  étaient héroïques en 1976 ;
-                  feu Hamid Hezzaz, Redouane el Guezzar,
-                  Tazi Abdellah et Abdelali Zeharoui, ils offriront à notre
-                  nation son unique coupe d’Afrique.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <button class="carousel-control-prev" type="button"
-        data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button"
-        data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+    </ngx-slick-carousel>
     </div>
+
   </section>
 </div>
 
-<section class="cup mt-5 pt-5 pb-5 mb-5">
+
+<section class="cup mb-5">
   <p class="h1-header text-center" style="color:#ffe600;">UN GRAND CLUB UNE
     GRANDE HISTOIRE</p>
     <div class="container">
-      <ngx-slick-carousel class="carousel"
+      <ngx-slick-carousel class="carousel p-2"
       #slickModal="slick-carousel"
       [config]="slideConfig">
-      <div ngxSlickItem *ngFor="let slide of slides" class="slide container">
+      <div ngxSlickItem *ngFor="let slide of slidesOfCups" class="slide container">
         <img style="margin: auto;" src="{{ slide.img }}" alt="" height="auto"
           width="191px">
-      </div>
+        </div>
     </ngx-slick-carousel>
     </div>
-  
 </section>
-<br>
+
+
+
 <div class="container">
   <section class="mb-5" id="public">
         <div class="row zone public">
@@ -292,9 +206,7 @@
               </div>
         </div>
   </section>
-  <br>
-
-
+  
   <section class="mb-5">
       <p><span class="h4" style="color:#ffe600;">Résultats</span><br> <span class="h1">DES DERNIERS MATCHS</span></p>
     <div class="row gy-4" >
