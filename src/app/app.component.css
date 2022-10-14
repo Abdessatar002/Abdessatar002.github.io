@@ -148,6 +148,10 @@ header {
   }
 }
 
+.president-img {
+  height: 100vh;
+  width: 90%;
+}
 @media only screen and (max-width: 767px) {
   .nav__link {
     --spacing: 1em;
@@ -161,6 +165,11 @@ header {
     font-size: 0.4rem;
   }
 
+                                .president-img {
+                                  width: 80%;
+                                  height: 60vh;
+                                  margin-bottom: 3px;
+                                }
   .home-intro {
     height: 100vh;
     background: #46464658 url(src/assets/img/small-screen.jpeg) no-repeat fixed top center;

@@ -4,22 +4,22 @@
   </a>
   <nav class="main-nav">
     <ul class="nav__list">
-      <li class="nav__list-item"><a href="./mas/#mot" class="nav__link">MOT DU PRÉSIDENT</a></li>
+      <li class="nav__list-item"><a (click)="scroll(mot_du_president)" routerLink="" class="nav__link">MOT DU PRÉSIDENT</a></li>
       <li class="nav__list-item">
-        <a href="./mas/#palmares" class="nav__link">PALMARÈS</a>
+        <a class="nav__link" (click)="scroll(palmares)" routerLink="">PALMARÈS</a>
       </li>
       <li class="nav__list-item">
-        <a href="./mas/#public" class="nav__link">PUBLIC</a>
+        <a (click)="scroll(public)" routerLink="" class="nav__link">PUBLIC</a>
       </li>
     </ul>
   </nav>
   <nav class="account">
     <ul class="nav__list">
       <li class="nav__list-item">
-        <a class="nav__link nav__link--btn" href="./mas/#abonnement">CARTES D'ABONNEMENT</a>
+        <a class="nav__link nav__link--btn" (click)="scroll(cartes_abonnement)" routerLink="">CARTES D'ABONNEMENT</a>
       </li>
       <li class="nav__list-item">
-        <a class="nav__link nav__link--btn" href="./mas/#ticket">Ticket</a>
+        <a class="nav__link nav__link--btn" (click)="scroll(ticket)" routerLink="">Ticket</a>
       </li>
       <!--      <li class="nav__list-item">-->
       <!--        <a class="nav__link nav__link&#45;&#45;btn nav__link&#45;&#45;btn&#45;&#45;highlight" href="#">Join</a>-->
@@ -52,14 +52,15 @@
     </div>
   </section>
 </main>
+
 <div class="container mb-5">
-  <section class="zone mb-5 ps-5 pe-5 pb-2" id="mot">
+  <section class="zone mb-5 ps-5 pe-5 pb-2" #mot_du_president>
     <div style="padding: 3vh 0;">
       <p class="h1-header">MOT DU PRÉSIDENT</p>
     </div>
     <div class="row text-center">
       <div class="col-sm-12 col-md-7 m-0 p-0">
-        <img style="height:100vh;width: 90%;"
+        <img class="president-img"
           src="assets/img/Image-2022-09-24-at-11.29.25-AM.jpeg" alt="">
       </div>
       <div class="col-sm-12 col-md-5 m-0 p-0">
@@ -95,7 +96,7 @@
     </div>
   </section>
 <br>
-  <section class="zone mb-5" id="palmares">
+  <section class="zone mb-5" #palmares>
     <div class="box" style="padding: 3vh 0;">
       <p class="h1-header m-0">PALMARÈS D'UN GRAND CLUB</p>
     </div>
@@ -143,7 +144,7 @@
 
 
 <div class="container">
-  <section class="mb-5" id="public">
+  <section class="mb-5" #public>
         <div class="row zone public pb-5">
               <div class="col-md-8 col-sm-12 m-0 p-0">
                 <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -326,14 +327,14 @@
 
 
 <div class="container">
-  <section id="abonnement" class="mt-4 mb-5">
+  <section class="mt-4 mb-5" #cartes_abonnement>
     <app-subscription-card></app-subscription-card>
   </section>
 <div class="mb-5"></div>
 </div>
 <br>
 <br>
-<section id="ticket" class="zone">
+<section class="zone" #ticket>
   <app-ticket-card></app-ticket-card>
 </section>
 
@@ -381,10 +382,10 @@
     <div class="col-md col-sm-12 text-center" style="padding: 0;">
       <ul class="nav__list mb-3">
         <li class="nav__list-item">
-          <a class="nav__link nav__link--btn" style="color: #ffe600;" href="./mas/#abonnement">CARTES D'ABONNEMENT</a>
+          <a class="nav__link nav__link--btn" style="color: #ffe600;" (click)="scroll(cartes_abonnement)" routerLink="">CARTES D'ABONNEMENT</a>
         </li>
         <li class="nav__list-item">
-          <a class="nav__link nav__link--btn" style="color: #ffe600;" href="./mas/#ticket">TICKET</a>
+          <a class="nav__link nav__link--btn" style="color: #ffe600;" (click)="scroll(ticket)" routerLink="">TICKET</a>
         </li>
       </ul>
     </div>

@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mas_front';
+
   slidesOfCups = [
     { img: 'assets/img/botola.png' },
     { img: 'assets/img/coupe-confederation.png' },
@@ -80,5 +81,7 @@ export class AppComponent {
     infinite: true,
   };
 
-
+  public scroll(el: HTMLElement) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
 }

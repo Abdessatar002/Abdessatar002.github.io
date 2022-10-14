@@ -21,4 +21,9 @@ export class SubscriptionCardComponent implements OnInit {
   ];
   slideConfig = { slidesToShow: 4, slidesToScroll: 4 };
 
+  public scroll(el: HTMLElement) {
+    el.scrollIntoView();
+  }
+
+
 }
