@@ -8,13 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { TicketCardComponent } from './componentes/ticket-card/ticket-card.component';
 import { ClickOutSideDirective } from './directives/click-out-side.directive';
+import { MasProductComponent } from './componentes/mas-product/mas-product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SubscriptionCardComponent,
     TicketCardComponent,
-    ClickOutSideDirective
+    ClickOutSideDirective,
+    MasProductComponent
 
   ],
   imports: [

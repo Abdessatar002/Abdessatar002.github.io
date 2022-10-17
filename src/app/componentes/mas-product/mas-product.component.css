@@ -1,0 +1,131 @@
+.product-grid {
+    text-align: center;
+    margin: 5px 15px 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.product-grid:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* transform: scale(1.1); */
+}
+
+.product-grid .product-image {
+    position: relative;
+}
+
+.product-grid .product-image a.image {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    display: block;
+}
+
+.product-grid .product-image img {
+    width: 100%;
+    height: auto;
+}
+
+.product-grid .product-sale-label {
+    color: #fff;
+    background: #009de1;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 3px;
+    position: absolute;
+    left: -4px;
+    top: -2px;
+    text-decoration: line-through;
+
+
+}
+
+.product-grid .price {
+    color: #fff;
+    background: #009de1;
+    font-size: 13px;
+    padding: 2px 6px 2px 18px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 1px 3px 3px 1px;
+    position: absolute;
+    top: 25px;
+    left: -15px;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 50%);
+}
+
+.product-grid .price span {
+    font-weight: 400;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.product-grid .price:before {
+    content: "";
+    background: #fff;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 7px;
+}
+
+.product-grid .price.fixed {
+    background: black;
+    top: -4px;
+}
+
+
+
+.product-grid .product-content {
+    background-color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+    border-top: 1px solid transparent;
+    border-radius: 0 0 10px 10px;
+    transition: all 0.3s;
+}
+
+.product-grid:hover .product-content {
+    border-top-color: #dbdbdb;
+}
+
+.product-grid .title {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.product-grid .title a {
+    color: #323b45;
+    transition: all 0.4s ease-out;
+}
+
+.product-grid .title a:hover {
+    color: #b71540;
+}
+
+.product-grid .rating {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.product-grid .rating li {
+    color: #f1c40f;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.product-grid .rating li.far {
+    color: #dbdbdb;
+}
+
+@media screen and (max-width:990px) {
+    .product-grid {
+        margin: 5px 15px 30px;
+    }
+}

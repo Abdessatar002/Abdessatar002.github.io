@@ -14,6 +14,9 @@
       <li class="nav__list-item">
         <a (click)="scroll(prochainMatch)" routerLink="" class="nav__link">PROCHAIN MATCH</a>
       </li>
+      <li class="nav__list-item">
+        <a (click)="scroll(produits)" routerLink="" class="nav__link">Produits</a>
+      </li>
     </ul>
   </nav>
   <nav class="account">
@@ -341,8 +344,13 @@
 </div>
 <br>
 <br>
-<section class="zone" #ticket>
+<section class="zone mb-5" #ticket>
   <app-ticket-card></app-ticket-card>
+</section>
+
+
+<section #produits class=" pb-5">
+  <app-mas-product></app-mas-product>
 </section>
 
   <br>
