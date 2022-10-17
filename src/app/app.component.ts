@@ -81,6 +81,44 @@ export class AppComponent {
     infinite: true,
   };
 
+  public onMobileNavToggle(_event: any) {
+    const mainNavElement = document.getElementById('main-nav');
+    const mobileNavToggleElement = document.getElementById('mobile-nav-toggle');
+    const mainNav = document.querySelector('#main-nav');
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const visibility = mainNav?.getAttribute('data-visible');
+
+    if (visibility === "false") {
+      mainNav?.setAttribute('data-visible', 'true');
+      navToggle?.setAttribute('aria-expanded', 'true');
+
+    } else {
+      mainNav?.setAttribute('data-visible', 'false');
+      navToggle?.setAttribute('aria-expanded', 'false');
+
+    }
+
+    window.onclick = function ($event) {
+      console.log($event.target);
+
+      if ($event.target != mainNavElement && mobileNavToggleElement != $event.target) {
+        mainNav?.setAttribute('data-visible', 'false');
+        navToggle?.setAttribute('aria-expanded', 'false');
+      }
+    };
+
+
+
+
+
+
+  }
+
+  clickOutSide() {
+
+
+  }
+
   public scroll(el: HTMLElement) {
     el.scrollIntoView({ behavior: 'smooth' });
   }

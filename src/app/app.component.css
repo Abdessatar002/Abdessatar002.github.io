@@ -25,6 +25,9 @@ header {
   padding: 0;
   display: flex;
 }
+.mobile-nav-toggle {
+  display: none;
+}
 
 .nav__link {
   --spacing: 1em;
@@ -152,32 +155,67 @@ header {
   height: 100vh;
   width: 90%;
 }
+
 @media only screen and (max-width: 767px) {
+  .main-nav .nav__list {
+      gap: 1rem;
+      position: fixed;
+      inset: 0 0 0 30%;
+      background: hsl(0, 0%, 0%, .80);
+      backdrop-filter: blur(1rem);
+      flex-direction: column;
+      padding: min(30vh, 10rem) 2rem;
+      z-index: 1000;
+      color: #ffe600;
+      transform: translateX(100%);
+      transition: transform 250ms ease-out;
+  
+    }
+  
+    .main-nav .nav__list[data-visible="true"] {
+      transform: translateX(0%);
+    }
+  
+    .mobile-nav-toggle {
+      display: block;
+      border: none;
+      background-color: transparent;
+      margin-left: .2rem;
+      margin-top: 1rem;
+      z-index: 99999;
+      background-image: url(src/assets/icons/hamburger-icon.svg);
+      background-repeat: no-repeat;
+      width: 2.5rem;
+      aspect-ratio: 1;
+    }
+  
+    .mobile-nav-toggle[aria-expanded="true"] {
+      background-image: url(src/assets/icons/close-icon.svg);
+    }
   .nav__link {
     --spacing: 1em;
     text-decoration: none;
-    color: inherit;
     display: inline-block;
     padding: calc(var(--spacing) / 2) var(--spacing);
     position: relative;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 0.4rem;
+    font-size: 0.5rem;
+    }
+    
+    .home-intro {
+      height: 100vh;
+      background: #46464658 url(src/assets/img/small-screen.jpeg) no-repeat fixed top center;
+      background-size: cover;
   }
 
                                 .president-img {
                                   width: 80%;
                                   height: 60vh;
                                   margin-bottom: 3px;
-                                }
-  .home-intro {
-    height: 100vh;
-    background: #46464658 url(src/assets/img/small-screen.jpeg) no-repeat fixed top center;
-    background-size: cover;
   }
 
   /* .home-intro .home-brand{} */
-
 
   header {
     --text: #ffe600;
@@ -195,6 +233,7 @@ header {
     transition: background 250ms ease-in;
     background: var(--background);
     color: var(--text);
+    font-size: 12px;
 
   }
 }
@@ -239,7 +278,7 @@ header {
   padding: 0;
   margin: 0;
   width: 100%;
-    height: 540px;
+  height: 540px;
 }
 
 .card-match {

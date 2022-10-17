@@ -2,8 +2,8 @@
   <a href="#" class="site-logo" aria-label="homepage">
     <img height="50" src="assets/img/MAS_logo.png" alt="">
   </a>
-  <nav class="main-nav">
-    <ul class="nav__list">
+  <nav class="main-nav" >
+    <ul class="nav__list" data-visible="false" id="main-nav">
       <li class="nav__list-item"><a (click)="scroll(mot_du_president)" routerLink="" class="nav__link">MOT DU PRÉSIDENT</a></li>
       <li class="nav__list-item">
         <a class="nav__link" (click)="scroll(palmares)" routerLink="">PALMARÈS</a>
@@ -11,10 +11,11 @@
       <li class="nav__list-item">
         <a (click)="scroll(public)" routerLink="" class="nav__link">PUBLIC</a>
       </li>
+      
     </ul>
   </nav>
   <nav class="account">
-    <ul class="nav__list">
+    <ul class="nav__list" >
       <li class="nav__list-item">
         <a class="nav__link nav__link--btn" (click)="scroll(cartes_abonnement)" routerLink="">CARTES D'ABONNEMENT</a>
       </li>
@@ -25,7 +26,11 @@
       <!--        <a class="nav__link nav__link&#45;&#45;btn nav__link&#45;&#45;btn&#45;&#45;highlight" href="#">Join</a>-->
       <!--      </li>-->
     </ul>
+
   </nav>
+  <button (click)="onMobileNavToggle($event)"  aria-controls="main-nav" aria-expanded="false" id="mobile-nav-toggle" class="mobile-nav-toggle">
+    <span class="sr-only">Menu</span>
+    </button>
 </header>
 <main class="mb-5">
   <section style="overflow: hidden;" class="home-intro">

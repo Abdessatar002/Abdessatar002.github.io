@@ -7,12 +7,14 @@ import { SubscriptionCardComponent } from './componentes/subscription-card/subsc
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { TicketCardComponent } from './componentes/ticket-card/ticket-card.component';
+import { ClickOutSideDirective } from './directives/click-out-side.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SubscriptionCardComponent,
-    TicketCardComponent
+    TicketCardComponent,
+    ClickOutSideDirective
 
   ],
   imports: [
