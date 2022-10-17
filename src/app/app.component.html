@@ -11,7 +11,9 @@
       <li class="nav__list-item">
         <a (click)="scroll(public)" routerLink="" class="nav__link">PUBLIC</a>
       </li>
-      
+      <li class="nav__list-item">
+        <a (click)="scroll(prochainMatch)" routerLink="" class="nav__link">PROCHAIN MATCH</a>
+      </li>
     </ul>
   </nav>
   <nav class="account">
@@ -289,7 +291,7 @@
 
 
 <div>
-  <section class="mb-5">
+  <section #prochainMatch class="mb-5">
     <div class="row zone" style="width: 99.99%; height: 80%; margin: auto;">
       
       <div class="col-md col-sm-12"  style="display: flex; align-self: center; ">
